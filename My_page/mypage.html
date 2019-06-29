@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+
+    	<title>Elvish_</title>
+		<link rel="shortcut icon" href="favicon-me_.ico" type="image/x-icon" />
+	<style type="text/css">
+
+		html{
+		  scroll-behavior: smooth;
+		}
+
+		.logo{
+			width:200px;
+			height:60px;
+			margin: -10px;
+		}
+
+		hr.line {
+			border-top: 3px double #8c8b8b;
+			margin-top: 100px;
+		}
+
+		.navbar-nav{
+			margin-left: 10%;
+		}
+		.navbar-nav a {
+			font-family: 'Times New Roman', serif;
+			font-size: 16px;
+			color: #494a4a;
+			margin-top: 5px;
+			margin-left: 70px;
+		}
+
+		.image{
+			position: relative;
+  			margin-top: -120px;
+  			margin-bottom: 50px;
+  			width: 180px;
+  			height: 180px;
+  			border: white 4px solid;
+    		box-shadow: 0 0 0 3px gray;
+    		border-radius: 50%;
+		}
+
+		.title1{
+			height: 100px;
+			width:400px;
+			margin-top: 100px;
+		}
+
+		.container{
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+
+		.card{
+			height: 180px;
+		}
+
+		.subtitle{
+			text-align: center;
+			font-family: 'Times New Roman', serif;
+			color: black;
+		}
+
+		#sticky-footer {
+			flex-shrink: none;
+		}
+
+		#footer-icon{
+			margin:5px;
+		}
+
+		/*  hover effect */
+
+		.hovereffect {
+		  width: 100%;
+		  height: 100%;
+		  float: left;
+		  overflow: hidden;
+		  position: relative;
+		  text-align: center;
+		  cursor: default;
+		}
+
+		.hovereffect .overlay {
+		  position: absolute;
+		  overflow: hidden;
+		  width: 80%;
+		  height: 80%;
+		  left: 10%;
+		  top: 10%;
+		  border-bottom: 1px solid #FFF;
+		  border-top: 1px solid #FFF;
+		  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+		  transition: opacity 0.35s, transform 0.35s;
+		  -webkit-transform: scale(0,1);
+		  -ms-transform: scale(0,1);
+		  transform: scale(0,1);
+		}
+
+		.hovereffect:hover .overlay {
+		  opacity: 1;
+		  filter: alpha(opacity=100);
+		  -webkit-transform: scale(1);
+		  -ms-transform: scale(1);
+		  transform: scale(1);
+		}
+
+		.hovereffect img {
+		  display: block;
+		  position: relative;
+		  -webkit-transition: all 0.35s;
+		  transition: all 0.35s;
+		}
+
+		.hovereffect:hover img {
+		  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
+		  filter: brightness(0.6);
+		  -webkit-filter: brightness(0.6);
+		}
+
+		.hovereffect h2 {
+		  text-transform: uppercase;
+		  text-align: center;
+		  position: relative;
+		  font-size: 17px;
+		  background-color: transparent;
+		  color: #FFF;
+		  padding: 1em 0;
+		  opacity: 0;
+		  filter: alpha(opacity=0);
+		  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+		  transition: opacity 0.35s, transform 0.35s;
+		  -webkit-transform: translate3d(0,-100%,0);
+		  transform: translate3d(0,-100%,0);
+		}
+
+		.hovereffect a, .hovereffect p {
+		  color: #FFF;
+		  padding: 1em 0;
+		  opacity: 0;
+		  filter: alpha(opacity=0);
+		  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+		  transition: opacity 0.35s, transform 0.35s;
+		  -webkit-transform: translate3d(0,100%,0);
+		  transform: translate3d(0,100%,0);
+		}
+
+		.hovereffect:hover a, .hovereffect:hover p, .hovereffect:hover h2 {
+		  opacity: 1;
+		  filter: alpha(opacity=100);
+		  -webkit-transform: translate3d(0,0,0);
+		  transform: translate3d(0,0,0);
+		}
+
+		/*  hover effect */
+
+		.chart-container {
+			width:100%;
+			margin-top: 50px;
+			margin-bottom: 50px;
+			display: inline-block;
+		}
+		.section {
+		    margin-top: -60px;
+		}
+
+		#box1{
+		  height: 200px;
+		  width: 900px;
+		  margin-bottom: 100px;
+		  background-image: url(./bk5.jpg);
+		  background-size: cover;
+		  display: table;
+		  background-attachment: fixed;
+		}
+
+		/* timeline content */
+
+		* {
+		   -webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		   box-sizing: border-box;
+		   outline: none;
+		}
+
+		body {
+		   margin: 0;
+		   padding: 30px 0;
+		   font-family: 'Roboto', sans-serif;
+		   background: #F1F2F6;
+		}
+
+		h1 {
+		   text-align: center;
+		   font-weight: 300;
+		   color: #777
+		}
+
+		h1 span {
+		   font-weight: 600;
+		}
+
+		.container-time {
+		   width: 80%;
+		   padding: 50px 0;
+		   margin: 50px auto;
+		   position: relative;
+		   overflow: hidden;
+		}
+
+		.container-time:before {
+		   content: '';
+		   position: absolute;
+		   top: 0;
+		   left: 50%;
+		   margin-left: -1px;
+		   width: 2px;
+		   height: 100%;
+		   background: #CCD1D9;
+		   z-index: 1
+		}
+
+		.timeline-block {
+		   width: -webkit-calc(50% + 8px);
+		   width: -moz-calc(50% + 8px);
+		   width: calc(50% + 8px);
+		   display: -webkit-box;
+		   display: -webkit-flex;
+		   display: -moz-box;
+		   display: flex;
+		   -webkit-box-pack: justify;
+		   -webkit-justify-content: space-between;
+		   -moz-box-pack: justify;
+		   justify-content: space-between;
+		   clear: both;
+		}
+
+		.timeline-block-right {
+		   float: right;
+		}
+
+		.timeline-block-left {
+		   float: left;
+		   direction: rtl
+		}
+
+		.marker {
+		   width: 16px;
+		   height: 16px;
+		   border-radius: 50%;
+		   border: 2px solid #F5F7FA;
+		   background: #4FC1E9;
+		   margin-top: 10px;
+		   z-index: 9999
+		}
+
+		.timeline-content {
+		   width: 95%;
+		   padding: 0 15px;
+		   color: #666
+		}
+
+		.timeline-content h3 {
+		   margin-top: 5px;
+		   margin-bottom: 5px;
+		   font-size: 25px;
+		   font-weight: 500
+		}
+
+		.timeline-content span {
+		   font-size: 15px;
+		   color: #a4a4a4;
+		}
+
+		.timeline-content p {
+		   font-size: 14px;
+		   line-height: 1.5em;
+		   word-spacing: 1px;
+		   color: #888;
+		}
+
+
+		@media screen and (max-width: 768px) {
+		   .container-time:before {
+		      left: 8px;
+		      width: 2px;
+		   }
+		   .timeline-block {
+		      width: 100%;
+		      margin-bottom: 30px;
+		   }
+		   .timeline-block-right {
+		      float: none;
+		   }
+
+		   .timeline-block-left {
+		      float: none;
+		      direction: ltr;
+		   }
+		}
+		/* timeline content */
+
+
+	</style>
+
+ </head>
+ <body>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <!-- NAV_BAR -->
+	<nav class="navbar sticky-top navbar navbar-expand-sm bg-light">
+	  	<a class="navbar-brand" href="#">
+		  	<img src="./name15.png" class="logo">
+		</a>
+
+		<button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+	        <span class="navbar-toggler-icon"></span>
+	    </button>
+		<div class="navbar-collapse collapse" id="collapsingNavbar">
+			  <!-- Links -->
+			<ul class="navbar-nav">
+			    <li class="nav-item">
+			      <a class="nav-link" href="#About">About</a>
+			    </li>
+			    <li class="nav-item">
+			      <a class="nav-link" href="#Skills">Skills</a>
+			    </li>
+			    <li class="nav-item">
+			      <a class="nav-link" href="#Projects">Projects</a>
+			    </li>
+			    <li class="nav-item">
+			      <a class="nav-link" href="#Timeline">Timeline</a>
+			    </li>
+			    <li class="nav-item">
+			      <a class="nav-link" href="#">Contact</a>
+			    </li>
+			</ul>
+		</div>
+
+	</nav>
+
+
+	<!-- top line -->	
+	<section id="About">
+	  	<br>
+			<hr class="line">
+		</br>	
+	</section>
+
+  	<!-- personal image -->
+  	<center>
+  		<img class="image" src="i1.jpg" >  
+	</center>
+
+	<!-- About content -->
+	<h3 class=subtitle>About me</h3>
+
+	<div class="container">
+	  	<div class="row justify-content-center align-items-center">
+	    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+			    <div class="hovereffect">
+			        <img src="./study.jpg" alt="..." class="img-thumbnail" alt="">
+			            <div class="overlay">
+			                <h2>Effect 13</h2>
+								<p>
+									<a href="#">LINK HERE</a>
+								</p>
+			            </div>
+			    </div>
+			</div>
+	    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+			    <div class="hovereffect">
+			        <img src="./read0.jpg" alt="..." class="img-thumbnail" alt="">
+			            <div class="overlay">
+			                <h2>Effect 13</h2>
+								<p>
+									<a href="#">LINK HERE</a>
+								</p>
+			            </div>
+			    </div>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+			    <div class="hovereffect">
+			        <img src="./computer.jpg" alt="..." class="img-thumbnail" alt="">
+			            <div class="overlay">
+			                <h2>Effect 13</h2>
+								<p>
+									<a href="#">LINK HERE</a>
+								</p>
+			            </div>
+			    </div>
+			</div>
+	  	</div>
+
+	  	<div class="row justify-content-center align-items-center">
+	    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+	    		<div class="card p-3 text-center">
+				    <blockquote class="blockquote mb-0 card-body">
+				      	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				    </blockquote>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+	    		<div class="card p-3 text-center">
+				    <blockquote class="blockquote mb-0 card-body">
+				      	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				      	</footer>
+				    </blockquote>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+	    		<div class="card p-3 text-center">
+				    <blockquote class="blockquote mb-0 card-body">
+				      	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				    </blockquote>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- skill content-->
+	<section id="Skills">
+	  	<br>
+			<hr class="line">
+		</br>
+	</section>
+
+	<h3 class=subtitle>My Skills</h3>
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+	
+		<div class="chart-container">
+			<div class="row align-items-center">
+				<div class="col-sm">
+					<canvas id="doughnut-chart1"></canvas>
+				</div>
+				<div class="col-sm">
+					<canvas id="doughnut-chart2"></canvas>
+				</div>
+				<div class="col-sm">
+					<canvas id="doughnut-chart3"></canvas>
+				</div>
+			</div>
+		</div>
+
+	
+	<script type="text/javascript">
+        new Chart(document.getElementById("doughnut-chart1"), {
+		    type: 'doughnut',
+		    data: {
+
+		      datasets: [
+		        {
+		          label: "Population (millions)",
+		          backgroundColor: ["#828487", "#486fa8"],
+		          data: [2478,5267]
+		        }
+		      ]
+		    },
+		    options: {
+		      title: {
+		        display: true,
+		        text: 'Coding'
+		      }
+		    }
+		});
+
+		new Chart(document.getElementById("doughnut-chart2"), {
+		    type: 'doughnut',
+		    data: {
+
+		      datasets: [
+		        {
+		          label: "Population (millions)",
+		          backgroundColor: ["#828487", "#486fa8"],
+		          data: [2478,5267]
+		        }
+		      ]
+		    },
+		    options: {
+		      title: {
+		        display: true,
+		        text: 'Coding'
+		      }
+		    }
+		});
+
+		new Chart(document.getElementById("doughnut-chart3"), {
+		    type: 'doughnut',
+		    data: {
+
+		      datasets: [
+		        {
+		          label: "Population (millions)",
+		          backgroundColor: ["#828487", "#486fa8"],
+		          data: [2478,5267]
+		        }
+		      ]
+		    },
+		    options: {
+		      title: {
+		        display: true,
+		        text: 'Coding'
+		      }
+
+		    }
+		});
+	</script>
+
+	<!-- projects content-->
+	<section id="Projects">
+	  	<br>
+			<hr class="line">
+		</br>
+	</section>
+
+	<h3 class=subtitle>My Projects</h3>
+
+	<section id="Timeline">
+	  	<br>
+			<hr class="line">
+		</br>
+	</section>
+
+	<h3 class=subtitle>Timeline</h3>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<div class="container-time">
+
+		   <div class="timeline-block timeline-block-right">
+		      <div class="marker"></div>
+		      <div class="timeline-content">
+		         <h3>First Year</h3>
+		         <span>Some work experience</span>
+		         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+		      </div>
+		   </div>
+
+		   <div class="timeline-block timeline-block-left">
+		      <div class="marker"></div>
+		      <div class="timeline-content">
+		         <h3>Seconed Year</h3>
+		         <span>Some work experience</span>
+		         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		      </div>
+		   </div>
+
+		   <div class="timeline-block timeline-block-right">
+		      <div class="marker"></div>
+		      <div class="timeline-content">
+		         <h3>Third Year</h3>
+		         <span>Some work experience</span>
+		         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		      </div>
+		   </div>
+
+		   <div class="timeline-block timeline-block-left">
+		      <div class="marker"></div>
+		      <div class="timeline-content">
+		         <h3>Fourth Year</h3>
+		         <span>Some work experience</span>
+		         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		      </div>
+		   </div>
+
+		   <div class="timeline-block timeline-block-right">
+		      <div class="marker"></div>
+		      <div class="timeline-content">
+		         <h3>Fifth Year</h3>
+		         <span>Some work experience</span>
+		         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		      </div>
+		   </div>
+		</div>
+
+
+	<br>
+		<hr class="line">
+	</br>
+
+	<center>
+		<div id="box1">
+	  		<h1>Helllo World!</h1>
+		</div>
+	</center>
+
+	<!-- footer -->
+	<footer id="sticky-footer" class="py-4 bg-secondary text-white-50">
+
+		<!-- Footer Elements -->
+	  	<div class="container">
+
+		    <!-- Social buttons -->
+		    <center>
+		    	<a href="https://www.instagram.com/aku_701/" target="_blank">
+			    	<img src="./ig1.png" id="footer-icon" class="img-responsive" width="30px">
+			    </a>
+			    <img src="./email.png" id="footer-icon" class="img-responsive" width="30px">
+			    <img src="./line.png" id="footer-icon" class="img-responsive" width="30px">
+
+			    <a href="https://www.facebook.com/profile.php?id=100013221104531" target="_blank">
+			    	<img src="./fb1.png" id="footer-icon" class="img-responsive" width="30px">
+			    </a>
+
+			    <a href="https://github.com/ntuelvish?tab=repositories" target="_blank">
+			    	<img src="./github2.png" id="footer-icon" class="img-responsive" width="30px">
+			    </a>
+			</center>
+	    <!-- Social buttons -->
+
+	  	</div>
+	  	<!-- Footer Elements -->
+
+	    <div class="container text-center">
+	      	<small>Copyright &copy; My Website</small>
+	    </div>
+	</footer>
+
+
+ </html>
