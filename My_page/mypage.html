@@ -522,6 +522,31 @@
 		    }
 		});
 	</script>
+	<div class="container">
+		<canvas id="marksChart" width="500" height="300"></canvas>
+	</div>
+	<script type="text/javascript">
+		var marksCanvas = document.getElementById("marksChart");
+
+		var marksData = {
+		  labels: ["English", "Maths", "Physics", "Chemistry", "Biology", "History"],
+		  datasets: [{
+		    label: "Student A",
+		    backgroundColor: "rgba(64,62,141,0.5)",
+		    data: [50,65, 70, 80, 60, 100]
+		  }, {
+		    label: "Student B",
+		    backgroundColor: "rgba(184,37,35,0.5)",
+		    data: [65, 60, 70, 70, 75]
+		  }]
+		};
+
+		var radarChart = new Chart(marksCanvas, {
+		  type: 'radar',
+		  data: marksData
+		});
+	</script>
+
 
 	<!-- projects content-->
 	<section id="Projects">
