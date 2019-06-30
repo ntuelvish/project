@@ -64,7 +64,7 @@
 		}
 
 		.card{
-			width: 700px;
+			/*width: 700px;*/
 		}
 
 		.subtitle{
@@ -185,8 +185,8 @@
 		}
 
 		#box1{
-		  height: 200px;
-		  width: 900px;
+		  height: 40vh;  /* 200px | 20% | 20vh */
+		  width: 90vw;
 		  margin-bottom: 100px;
 		  background-image: url(./bk11.jpeg);
 		  background-size: cover;
@@ -321,7 +321,6 @@
 		   .timeline-block-right {
 		      float: none;
 		   }
-
 		   .timeline-block-left {
 		      float: none;
 		      direction: ltr;
@@ -344,7 +343,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
     <!-- NAV_BAR -->
-	<nav class="navbar sticky-top navbar navbar-expand-sm bg-light">
+	<nav class="navbar fixed-top navbar navbar-expand-sm bg-light">
 	  	<a class="navbar-brand" href="#">
 		  	<img src="./name15.png" class="logo">
 		</a>
@@ -385,7 +384,7 @@
 
   	<!-- personal image -->
   	<center>
-  		<img class="image" src="i1.jpg" onclick="this.src='i3.jpg'"/>  
+  		<img class="image" src="i1.jpg" onclick="this.src='i3.jpg'"/>
 	</center>
 
 	<!-- About content -->
@@ -438,98 +437,20 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 		
-
-			<!-- dougnuts -->
-	<div class="dougnuts-container">
-		<div class="row align-items-center">
-				<div class="col-sm">
+	<!-- dougnuts -->
+	<div class="container">
+		<div class="row">
+				<div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 mb-2">
 					<canvas id="doughnut-chart1"></canvas>
 				</div>
-				<div class="col-sm">
+				<div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 mb-2">
 					<canvas id="doughnut-chart2"></canvas>
 				</div>
-				<div class="col-sm">
+				<div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 mb-2">
 					<canvas id="doughnut-chart3"></canvas>
 				</div>
 		</div>
 	</div>
-
-	
-	<script type="text/javascript">
-		//Chart.defaults.global.defaultFontSize ='20';
-        new Chart(document.getElementById("doughnut-chart1"), {
-		    type: 'doughnut',
-		    data: {
-
-		      datasets: [
-		        {
-		          backgroundColor: ["#486fa8", "#b1b2b3",'#a1d0f0','#816de3','#a9abe8'],
-		          data: [50,65,30,20,10]
-		        }
-		      ],
-		      labels: ["Microeconomics","Statistics","Calculus","Macroeconomics","Others"]
-		    },
-		    options: {
-		      title: {
-		      	position:'bottom',
-		        display: true,
-		        text: 'Economics',
-		        fontSize:18,
-		        fontFamily:'Helvetica Neue'
-		      }
-
-		    }
-		});
-
-		new Chart(document.getElementById("doughnut-chart2"), {
-		    type: 'doughnut',
-		    data: {
-
-		      	datasets: [
-		        	{
-			          
-			          backgroundColor: ['#e0770d','#d61522','#9c4936','#d12a6a'],
-			          data: [75,10,15,7]
-			        }
-		      	],
-		      	labels: ["Python","R","C","Others"]
-		    	},
-		    options: {
-		      title: {
-		      	position:'bottom',
-		        display: true,
-		        text: 'Coding',
-		        fontSize:18,
-		        fontFamily:'Helvetica Neue'
-		      }
-		    }
-		});
-
-		new Chart(document.getElementById("doughnut-chart3"), {
-		    type: 'doughnut',
-		    data: {
-
-		      datasets: [
-		        {
-		          backgroundColor: ['#249e33',"#50805f",'#faf620','#085721'],
-		          data: [60,10,7,30]
-		        }
-		      ],
-		      labels: ["Self-learning","Writing","Design","Communication"]
-		    },
-		    options: {
-		      title: {
-		      	position:'bottom',
-		        display: true,
-		        text: 'Other',
-		        fontSize:18,
-		        fontFamily:'Helvetica Neue'
-		      }
-
-		    }
-		});
-	</script>
-	
 
 	<!-- projects content-->
 	<section id="Projects">
@@ -541,18 +462,18 @@
 	<h3 class=subtitle>My Projects</h3>
 
     <div class="container">
-	    <div class="row bg-faded">
-	        <div class="col-md-4">
+	    <div class="row">
+	        <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5 mb-3">
 	            <img src="./ch.png" class="img-thumbnail">
 	        </div>
-	        <div class="col-md-6">
-	            <div class="card card-body h-100 justify-content-center">
+	        <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7 mb-3">
+	            <div class="card card-body h-100">
 	               	<h5 class="card-title">Market Sentiment & ETF Analysis</h5>
 	    			<p class="card-text">The final project of a course I take, which focus on the market sentiment analysis. The goal is to find out the relationship between ETF price and market sentiment, and build a model that could predict ETF price.</p>
 	            </div>
 	        </div>
 	    </div>
-		</div>
+	</div>
 
 	<section id="Timeline">
 	  	<br>
@@ -668,4 +589,84 @@
 	</footer>
 
 
+	<script type="text/javascript">
+		//Chart.defaults.global.defaultFontSize ='20';
+		var ctx1 = document.getElementById("doughnut-chart1").getContext('2d');
+        new Chart(ctx1, {
+		    type: 'doughnut',
+		    data: {
+
+		      datasets: [
+		        {
+		          backgroundColor: ["#486fa8", "#b1b2b3",'#a1d0f0','#816de3','#a9abe8'],
+		          data: [50,65,30,20,10]
+		        }
+		      ],
+		      // labels: ["Microeconomics","Statistics","Calculus","Macroeconomics","Others"]
+		    },
+		    options: {
+		      title: {
+		      	position:'bottom',
+		        display: true,
+		        text: 'Python',
+		        fontSize:18,
+		        fontFamily:'Helvetica Neue',
+		        responsive:false
+		      }
+
+		    }
+		});
+
+        var ctx2 = document.getElementById("doughnut-chart2").getContext('2d');
+		new Chart(ctx2, {
+		    type: 'doughnut',
+		    data: {
+
+		      	datasets: [
+		        	{
+			          
+			          backgroundColor: ['#e0770d','#d61522','#9c4936','#d12a6a'],
+			          data: [75,10,15,7]
+			        }
+		      	],
+		      	// labels: ["Python","R","C","Others"]
+		    	},
+		    options: {
+		      title: {
+		      	position:'bottom',
+		        display: true,
+		        text: 'Coding',
+		        fontSize:18,
+		        fontFamily:'Helvetica Neue',
+		        responsive:false
+		      }
+		    }
+		});
+
+		var ctx3 = document.getElementById("doughnut-chart3").getContext('2d');
+		new Chart(ctx3, {
+		    type: 'doughnut',
+		    data: {
+
+		      datasets: [
+		        {
+		          backgroundColor: ['#249e33',"#50805f",'#faf620','#085721'],
+		          data: [60,10,7,30]
+		        }
+		      ],
+		      // labels: ["Self-learning","Writing","Design","Communication"]
+		    },
+		    options: {
+		      title: {
+		      	position:'bottom',
+		        display: true,
+		        text: 'Other',
+		        fontSize:18,
+		        fontFamily:'Helvetica Neue',
+		        responsive:false
+		      }
+
+		    }
+		});
+	</script>
  </html>
