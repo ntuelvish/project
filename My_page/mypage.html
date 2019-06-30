@@ -129,19 +129,21 @@
 		}
 
 		.hovereffect h2 {
-		  text-transform: uppercase;
-		  text-align: center;
-		  position: relative;
-		  font-size: 17px;
-		  background-color: transparent;
-		  color: #FFF;
-		  padding: 1em 0;
-		  opacity: 0;
-		  filter: alpha(opacity=0);
-		  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-		  transition: opacity 0.35s, transform 0.35s;
-		  -webkit-transform: translate3d(0,-100%,0);
-		  transform: translate3d(0,-100%,0);
+			margin-top: 100px;
+			line-height: 50PX;
+		  	text-transform: uppercase;
+		  	text-align: center;
+		  	position: relative;
+		  	font-size: 17px;
+		  	background-color: transparent;
+		  	color: #FFF;
+		  	padding: 1em 0;
+		  	opacity: 0;
+		  	filter: alpha(opacity=0);
+		  	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+		  	transition: opacity 0.35s, transform 0.35s;
+		  	-webkit-transform: translate3d(0,-100%,0);
+		  	transform: translate3d(0,-100%,0);
 		}
 
 		.hovereffect a, .hovereffect p {
@@ -164,12 +166,20 @@
 
 		/*  hover effect */
 
-		.chart-container {
-			width:100%;
-			margin-top: 50px;
-			margin-bottom: 50px;
-			display: inline-block;
+		/* charts*/
+		.chart-container{
+			margin-bottom: 200px;
 		}
+		.radar-container{
+			float:right;
+			margin-right: 100px;
+
+		}
+		.dougnuts-container{
+			margin-left: 200px;
+			margin-top: 50px;
+		}
+
 		.section {
 		    margin-top: -60px;
 		}
@@ -310,7 +320,6 @@
 		}
 		/* timeline content */
 
-
 	</style>
 
  </head>
@@ -347,7 +356,7 @@
 			      <a class="nav-link" href="#Timeline">Timeline</a>
 			    </li>
 			    <li class="nav-item">
-			      <a class="nav-link" href="#">Contact</a>
+			      <a class="nav-link" href="#Contact">Contact</a>
 			    </li>
 			</ul>
 		</div>
@@ -374,31 +383,25 @@
 	  	<div class="row justify-content-center align-items-center">
 	    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
 			    <div class="hovereffect">
-			        <img src="./study.jpg" alt="..." class="img-thumbnail" alt="">
+			        <img src="./001.jpg" alt="..." class="img-thumbnail" alt="">
 			            <div class="overlay">
-			                <h2>Effect 13</h2>
-								<p>
-									<a href="#">LINK HERE</a>
-								</p>
+			                <h2>Economics<br>X</h2>
 			            </div>
 			    </div>
 			</div>
 	    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
 			    <div class="hovereffect">
-			        <img src="./read0.jpg" alt="..." class="img-thumbnail" alt="">
+			        <img src="./002.jpg" alt="..." class="img-thumbnail" alt="">
 			            <div class="overlay">
-			                <h2>Effect 13</h2>
-								<p>
-									<a href="#">LINK HERE</a>
-								</p>
+			                <h2>Computer Science</h2>
 			            </div>
 			    </div>
 			</div>
 			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
 			    <div class="hovereffect">
-			        <img src="./computer.jpg" alt="..." class="img-thumbnail" alt="">
+			        <img src="./003.jpg" alt="..." class="img-thumbnail" alt="">
 			            <div class="overlay">
-			                <h2>Effect 13</h2>
+			                <h2>Chinese literature</h2>
 								<p>
 									<a href="#">LINK HERE</a>
 								</p>
@@ -444,23 +447,65 @@
 	<h3 class=subtitle>My Skills</h3>
 
 	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-	
+		
 		<div class="chart-container">
-			<div class="row align-items-center">
-				<div class="col-sm">
-					<canvas id="doughnut-chart1"></canvas>
-				</div>
-				<div class="col-sm">
-					<canvas id="doughnut-chart2"></canvas>
-				</div>
-				<div class="col-sm">
-					<canvas id="doughnut-chart3"></canvas>
-				</div>
+			<div class="radar-container" style="position: relative; height:60vh; width:55vw">
+				<canvas id="marksChart"></canvas>
 			</div>
+
+			<!-- dougnuts -->
+			<div class="dougnuts-container" style="position: relative; height:20vh; width:20vw">
+					<canvas id="doughnut-chart1"></canvas>
+					<canvas id="doughnut-chart2"></canvas>
+					<canvas id="doughnut-chart3"></canvas>
+
+			</div>
+
 		</div>
+
+		<script type="text/javascript">
+			//Chart.defaults.global.defaultFontFamily = 'serif';
+
+			var marksCanvas = document.getElementById("marksChart");
+
+			var marksData = {
+			  labels: [ "Economics", "Designing", "Self-learning", "Statistics", "Coding"],
+			  datasets: [{
+			    label: "Now",
+			    backgroundColor: "rgba(60,69,168,0.5)",
+			    data: [7, 4, 9, 7.5, 6.5]
+			  }, {
+			    label: "Future",
+			    backgroundColor: "rgba(90, 91, 97,0.5)",
+			    data: [8.5, 5, 9.5, 8.5, 8.5]
+			  }]
+
+
+
+			};
+
+			var radarChart = new Chart(marksCanvas, {
+			  type: 'radar',
+			  data: marksData,
+			  options:{
+			  	legend:{
+			  		position:'bottom',
+			  		labels:{
+			  			fontSize:18,
+			  			fontFamily:'Helvetica Neue'
+			  		}
+			  	}
+			  }
+
+			});
+			
+	</script>
+
+
 
 	
 	<script type="text/javascript">
+		//Chart.defaults.global.defaultFontSize ='20';
         new Chart(document.getElementById("doughnut-chart1"), {
 		    type: 'doughnut',
 		    data: {
@@ -468,16 +513,20 @@
 		      datasets: [
 		        {
 		          label: "Population (millions)",
-		          backgroundColor: ["#828487", "#486fa8"],
-		          data: [2478,5267]
+		          backgroundColor: ["#486fa8", "#b1b2b3"],
+		          data: [75,25]
 		        }
 		      ]
 		    },
 		    options: {
 		      title: {
+		      	position:'bottom',
 		        display: true,
-		        text: 'Coding'
+		        text: 'Python',
+		        fontSize:18,
+		        fontFamily:'Helvetica Neue'
 		      }
+
 		    }
 		});
 
@@ -488,15 +537,18 @@
 		      datasets: [
 		        {
 		          label: "Population (millions)",
-		          backgroundColor: ["#828487", "#486fa8"],
-		          data: [2478,5267]
+		          backgroundColor: ['#e0770d','#b1b2b3'],
+		          data: [25,75]
 		        }
 		      ]
 		    },
 		    options: {
 		      title: {
+		      	position:'bottom',
 		        display: true,
-		        text: 'Coding'
+		        text: 'R',
+		        fontSize:18,
+		        fontFamily:'Helvetica Neue'
 		      }
 		    }
 		});
@@ -508,45 +560,24 @@
 		      datasets: [
 		        {
 		          label: "Population (millions)",
-		          backgroundColor: ["#828487", "#486fa8"],
-		          data: [2478,5267]
+		          backgroundColor: ['#249e33',"#b1b2b3"],
+		          data: [50,50]
 		        }
 		      ]
 		    },
 		    options: {
 		      title: {
+		      	position:'bottom',
 		        display: true,
-		        text: 'Coding'
+		        text: 'Other',
+		        fontSize:18,
+		        fontFamily:'Helvetica Neue'
 		      }
 
 		    }
 		});
 	</script>
-	<div class="container">
-		<canvas id="marksChart" width="500" height="300"></canvas>
-	</div>
-	<script type="text/javascript">
-		var marksCanvas = document.getElementById("marksChart");
-
-		var marksData = {
-		  labels: ["English", "Maths", "Physics", "Chemistry", "Biology", "History"],
-		  datasets: [{
-		    label: "Student A",
-		    backgroundColor: "rgba(64,62,141,0.5)",
-		    data: [50,65, 70, 80, 60, 100]
-		  }, {
-		    label: "Student B",
-		    backgroundColor: "rgba(184,37,35,0.5)",
-		    data: [65, 60, 70, 70, 75]
-		  }]
-		};
-
-		var radarChart = new Chart(marksCanvas, {
-		  type: 'radar',
-		  data: marksData
-		});
-	</script>
-
+	
 
 	<!-- projects content-->
 	<section id="Projects">
@@ -556,6 +587,23 @@
 	</section>
 
 	<h3 class=subtitle>My Projects</h3>
+
+	<div class="container py-3">
+    	<div class="card">
+      		<div class="row ">
+        		<div class="col-md-4">
+            		<img src="./chart-image.png" class="w-100">
+          		</div>
+	          	<div class="col-md-8 px-3 align-self-center">
+	            	<div class="card-block px-3">
+	              		<h5 class="card-title">Market Sentiment & ETF Analysis</h5>
+	              		<p class="card-text">The final project of a course I take, which focus on the market sentiment analysis. The goal is to find out the relationship between ETF price and market sentiment, and build a model that could predict ETF price. </p>
+	            	</div>
+	          	</div>
+
+       		 </div>
+      	</div>
+    </div>
 
 	<section id="Timeline">
 	  	<br>
@@ -572,8 +620,8 @@
 		      <div class="marker"></div>
 		      <div class="timeline-content">
 		         <h3>First Year</h3>
-		         <span>Some work experience</span>
-		         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+		         <span>Chinese Literature</span>
+		         <p>Major in Chinese Literature, yet soon found out I'm not interested in it. Started to contact coding, also took many courses related to business. </p>
 		      </div>
 		   </div>
 
@@ -581,8 +629,8 @@
 		      <div class="marker"></div>
 		      <div class="timeline-content">
 		         <h3>Seconed Year</h3>
-		         <span>Some work experience</span>
-		         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		         <span>Economics</span>
+		         <p> Study Economics and try hard to apply for double major. </p>
 		      </div>
 		   </div>
 
@@ -590,8 +638,8 @@
 		      <div class="marker"></div>
 		      <div class="timeline-content">
 		         <h3>Third Year</h3>
-		         <span>Some work experience</span>
-		         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		         <span>Economics & Coding</span>
+		         <p>Be interested in datascience, also study hard on it.</p>
 		      </div>
 		   </div>
 
@@ -599,17 +647,14 @@
 		      <div class="marker"></div>
 		      <div class="timeline-content">
 		         <h3>Fourth Year</h3>
-		         <span>Some work experience</span>
-		         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		         <p>Continue studying, intern at compeny.</p>
 		      </div>
 		   </div>
 
 		   <div class="timeline-block timeline-block-right">
 		      <div class="marker"></div>
 		      <div class="timeline-content">
-		         <h3>Fifth Year</h3>
-		         <span>Some work experience</span>
-		         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		         <h3>Future Plan</h3>
 		      </div>
 		   </div>
 		</div>
@@ -621,7 +666,6 @@
 
 	<center>
 		<div id="box1">
-	  		<h1>Helllo World!</h1>
 		</div>
 	</center>
 
@@ -630,6 +674,11 @@
 
 		<!-- Footer Elements -->
 	  	<div class="container">
+	  		<center>
+	  			<section id="Contact">
+					<h5 class="font-weight-bold text-uppercase mb-4">Contact me</h5>
+				</section>
+			</center>
 
 		    <!-- Social buttons -->
 		    <center>
