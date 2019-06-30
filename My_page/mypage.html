@@ -64,7 +64,8 @@
 		}
 
 		.card{
-			height: 180px;
+			height: 150px;
+			width: 800px;
 		}
 
 		.subtitle{
@@ -189,10 +190,14 @@
 		  height: 200px;
 		  width: 900px;
 		  margin-bottom: 100px;
-		  background-image: url(./bk5.jpg);
+		  background-image: url(./bk11.jpeg);
 		  background-size: cover;
 		  display: table;
 		  background-attachment: fixed;
+		}
+		.chart-image{
+			height: 350px;
+			width: 500px;
 		}
 
 		/* timeline content */
@@ -457,7 +462,7 @@
 
 		      datasets: [
 		        {
-		          label: "Population (millions)",
+		          label: "",
 		          backgroundColor: ["#486fa8", "#b1b2b3"],
 		          data: [75,25]
 		        }
@@ -534,19 +539,36 @@
 	<h3 class=subtitle>My Projects</h3>
 
 	<div class="container">
-    	<div class="card">
-      		<div class="row ">
-        		<div class="col-4">
-            		<img src="./chart-image1.png" class="img-thumbnail">
-          		</div>
-	          	<div class="col-6 align-self-center">
-	              		<h5 class="card-title">Market Sentiment & ETF Analysis</h5>
-	              		<p class="card-text">The final project of a course I take, which focus on the market sentiment analysis. The goal is to find out the relationship between ETF price and market sentiment, and build a model that could predict ETF price. </p>
-	          	</div>
+		<center>
+			<div class="chart-image">
+        		<img src="./chart-image1.png" class="img-thumbnail">
+        	</div>
+        
+	    <div class="card text-center">
 
-       		 </div>
-      	</div>
+		  <div class="card-body">
+		    <h5 class="card-title">Market Sentiment & ETF Analysis</h5>
+		    <p class="card-text">The final project of a course I take, which focus on the market sentiment analysis. The goal is to find out the relationship between ETF price and market sentiment, and build a model that could predict ETF price.</p>
+		  </div></center>
+
     </div>
+
+    <div class="container">
+		    <code>vertical center content of full height cards (solved)</code>
+		    <div class="row bg-faded">
+		        <div class="col-md-4">
+		            <div class="card card-body h-100 justify-content-center">
+		                I have a lot of content that wraps on multiple lines..
+		            </div>
+		        </div>
+		        <div class="col-md-6">
+		            <div class="card card-body h-100 justify-content-center">
+		               I have a line of content.<br>
+		               And another line here..
+		            </div>
+		        </div>
+		    </div>
+		</div>
 
 	<section id="Timeline">
 	  	<br>
