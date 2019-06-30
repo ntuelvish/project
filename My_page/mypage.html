@@ -64,8 +64,7 @@
 		}
 
 		.card{
-			height: 150px;
-			width: 800px;
+			width: 700px;
 		}
 
 		.subtitle{
@@ -137,8 +136,7 @@
 		}
 
 		.hovereffect h2 {
-			margin-top: 100px;
-			line-height: 50PX;
+			line-height: 35PX;
 		  	text-transform: uppercase;
 		  	text-align: center;
 		  	position: relative;
@@ -387,7 +385,7 @@
 
   	<!-- personal image -->
   	<center>
-  		<img class="image" src="i1.jpg" >  
+  		<img class="image" src="i1.jpg" onclick="this.src='i3.jpg'"/>  
 	</center>
 
 	<!-- About content -->
@@ -397,25 +395,28 @@
 	  	<div class="row justify-content-center align-items-center">
 	    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
 			    <div class="hovereffect">
-			        <img src="./001.jpg" alt="..." class="img-thumbnail" alt="">
+			        <img src="./01.jpg" alt="..." class="img-thumbnail" alt="">
 			            <div class="overlay">
-			                <h2>Economics<br>X</h2>
+			                <h2>Economics<br>X<br>
+			                "There ain't no such thing as a free lunch."</h2>
 			            </div>
 			    </div>
 			</div>
 	    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
 			    <div class="hovereffect">
-			        <img src="./002.jpg" alt="..." class="img-thumbnail" alt="">
+			        <img src="./02.jpg" alt="..." class="img-thumbnail" alt="">
 			            <div class="overlay">
-			                <h2>Computer Science</h2>
+			                <h2>Computer Science<br>X<br>
+			                "Standards are always out of date."</h2>
 			            </div>
 			    </div>
 			</div>
 			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
 			    <div class="hovereffect">
-			        <img src="./003.jpg" alt="..." class="img-thumbnail" alt="">
+			        <img src="./03.jpg" alt="..." class="img-thumbnail" alt="">
 			            <div class="overlay">
-			                <h2>Chinese literature</h2>
+			                <h2>Chinese literature<br>X<br>
+			                "The difficulty of literature is not to write, but to write what you mean."</h2>
 								<p>
 									<a href="#">LINK HERE</a>
 								</p>
@@ -462,11 +463,11 @@
 
 		      datasets: [
 		        {
-		          label: "",
-		          backgroundColor: ["#486fa8", "#b1b2b3"],
-		          data: [75,25]
+		          backgroundColor: ["#486fa8", "#b1b2b3",'#a1d0f0','#816de3','#a9abe8'],
+		          data: [50,65,30,20,10]
 		        }
-		      ]
+		      ],
+		      labels: ["Microeconomics","Statistics","Calculus","Macroeconomics","Others"]
 		    },
 		    options: {
 		      title: {
@@ -484,19 +485,20 @@
 		    type: 'doughnut',
 		    data: {
 
-		      datasets: [
-		        {
-		          label: "Population (millions)",
-		          backgroundColor: ['#e0770d','#b1b2b3'],
-		          data: [25,75]
-		        }
-		      ]
-		    },
+		      	datasets: [
+		        	{
+			          
+			          backgroundColor: ['#e0770d','#d61522','#9c4936','#d12a6a'],
+			          data: [75,10,15,7]
+			        }
+		      	],
+		      	labels: ["Python","R","C","Others"]
+		    	},
 		    options: {
 		      title: {
 		      	position:'bottom',
 		        display: true,
-		        text: 'R',
+		        text: 'Coding',
 		        fontSize:18,
 		        fontFamily:'Helvetica Neue'
 		      }
@@ -509,11 +511,11 @@
 
 		      datasets: [
 		        {
-		          label: "Population (millions)",
-		          backgroundColor: ['#249e33',"#b1b2b3"],
-		          data: [50,50]
+		          backgroundColor: ['#249e33',"#50805f",'#faf620','#085721'],
+		          data: [60,10,7,30]
 		        }
-		      ]
+		      ],
+		      labels: ["Self-learning","Writing","Design","Communication"]
 		    },
 		    options: {
 		      title: {
@@ -538,36 +540,18 @@
 
 	<h3 class=subtitle>My Projects</h3>
 
-	<div class="container">
-		<center>
-			<div class="chart-image">
-        		<img src="./chart-image1.png" class="img-thumbnail">
-        	</div>
-        
-	    <div class="card text-center">
-
-		  <div class="card-body">
-		    <h5 class="card-title">Market Sentiment & ETF Analysis</h5>
-		    <p class="card-text">The final project of a course I take, which focus on the market sentiment analysis. The goal is to find out the relationship between ETF price and market sentiment, and build a model that could predict ETF price.</p>
-		  </div></center>
-
-    </div>
-
     <div class="container">
-		    <code>vertical center content of full height cards (solved)</code>
-		    <div class="row bg-faded">
-		        <div class="col-md-4">
-		            <div class="card card-body h-100 justify-content-center">
-		                I have a lot of content that wraps on multiple lines..
-		            </div>
-		        </div>
-		        <div class="col-md-6">
-		            <div class="card card-body h-100 justify-content-center">
-		               I have a line of content.<br>
-		               And another line here..
-		            </div>
-		        </div>
-		    </div>
+	    <div class="row bg-faded">
+	        <div class="col-md-4">
+	            <img src="./chart-image1.png" class="img-thumbnail">
+	        </div>
+	        <div class="col-md-6">
+	            <div class="card card-body h-100 justify-content-center">
+	               	<h5 class="card-title">Market Sentiment & ETF Analysis</h5>
+	    			<p class="card-text">The final project of a course I take, which focus on the market sentiment analysis. The goal is to find out the relationship between ETF price and market sentiment, and build a model that could predict ETF price.</p>
+	            </div>
+	        </div>
+	    </div>
 		</div>
 
 	<section id="Timeline">
@@ -650,9 +634,14 @@
 		    	<a href="https://www.instagram.com/aku_701/" target="_blank">
 			    	<img src="./ig1.png" id="footer-icon" class="img-responsive" width="30px">
 			    </a>
-			    <img src="./email.png" id="footer-icon" class="img-responsive" width="30px">
-			    <img src="./line.png" id="footer-icon" class="img-responsive" width="30px">
-
+			    <a  data-toggle="popover" title="NTU mail" data-placement="top"
+            data-content="b05101047@ntu.edu.tw">
+			    	<img src="./email.png" id="footer-icon" class="img-responsive" width="30px">
+				</a>
+				<a  data-toggle="popover" title="LINE ID" data-placement="top"
+            data-content="pisces701">
+			    <img src="./line.png" id="footer-icon" class="img-responsive" width="30px" >
+				</a>
 			    <a href="https://www.facebook.com/profile.php?id=100013221104531" target="_blank">
 			    	<img src="./fb1.png" id="footer-icon" class="img-responsive" width="30px">
 			    </a>
@@ -661,6 +650,13 @@
 			    	<img src="./github2.png" id="footer-icon" class="img-responsive" width="30px">
 			    </a>
 			</center>
+
+			<script type="text/javascript">
+				// popovers Initialization
+				$(function (){
+				    $("[data-toggle='popover']").popover();
+				});
+			</script>
 	    <!-- Social buttons -->
 
 	  	</div>
