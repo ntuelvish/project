@@ -22,3 +22,4 @@
 
 ## D3  
 [Create a JavaScript bar chart with D3](https://www.creativebloq.com/javascript/create-javascript-bar-chart-d3-9134563)  
+[svg-basic-shapes-and-d3js](https://www.dashingd3js.com/svg-basic-shapes-and-d3js)  
