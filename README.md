@@ -24,3 +24,5 @@
 [Create a JavaScript bar chart with D3](https://www.creativebloq.com/javascript/create-javascript-bar-chart-d3-9134563)  
 [svg-basic-shapes-and-d3js](https://www.dashingd3js.com/svg-basic-shapes-and-d3js)  
 [d3js](https://www.tutorialsteacher.com/d3js)  
+[reusability-with-d3](https://bocoup.com/blog/reusability-with-d3)  
+[interactivity_button](https://www.d3-graph-gallery.com/graph/interactivity_button.html)  

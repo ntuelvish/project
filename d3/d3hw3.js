@@ -39,7 +39,7 @@ var scaleY = d3.scaleLinear()
 			.domain([d3.min(dataset,function(d){return d.low}),d3.max(dataset,function(d){return d.high})])
 			.range([0,svgHeight])
 
-console.log("輸出的值 = " + scaleY(70) + scaleX(15))
+//console.log( scaleY(70) + scaleX(15))
 
 			
 chart1.selectAll('line')
@@ -86,8 +86,8 @@ chart1.selectAll("rect")
 	}); 
 
 //3-2
-function drawChart(data) {
-	var svgWidth = 500, svgHeight = 300, barPadding = 75;
+function drawChart(data,width,height) {
+	var svgWidth = width, svgHeight = height, barPadding = 75;
 	var chart1 = d3.select('#chart')
   	.append("svg")
 	.attr("width", svgWidth)  
@@ -102,8 +102,6 @@ function drawChart(data) {
 	var scaleY = d3.scaleLinear()
 				.domain([d3.min(dataset,function(d){return d.low}),d3.max(dataset,function(d){return d.high})])
 				.range([0,svgHeight])
-
-	console.log("輸出的值 = " + scaleY(70) + scaleX(15))
 
 				
 	chart1.selectAll('line')
@@ -150,5 +148,21 @@ function drawChart(data) {
 		}); 
 }
 
+
 //call the function
-drawChart(dataset);
+//input dataset,width,height
+drawChart(dataset,800,200);
+
+/*
+function changeSize(){
+	chart1.exit().remove();
+	drawChart(dataset,this.value,200)
+}
+
+d3.select("#input_width").on("input",print())
+console.log(d3.select("#input_width").node().value)
+function print(){
+	console.log(this.value)
+	console.log(d3.select("#input_width").node().value)
+}
+*/
