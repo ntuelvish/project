@@ -26,3 +26,5 @@
 [d3js](https://www.tutorialsteacher.com/d3js)  
 [reusability-with-d3](https://bocoup.com/blog/reusability-with-d3)  
 [interactivity_button](https://www.d3-graph-gallery.com/graph/interactivity_button.html)  
+[Data Visualization with D3.js](https://www.youtube.com/watch?v=_8V5o2UHG0E)  
+[responsive-chart-usability-d3](https://webkid.io/blog/responsive-chart-usability-d3/)  
