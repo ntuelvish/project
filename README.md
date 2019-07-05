@@ -28,3 +28,6 @@
 [interactivity_button](https://www.d3-graph-gallery.com/graph/interactivity_button.html)  
 [Data Visualization with D3.js](https://www.youtube.com/watch?v=_8V5o2UHG0E)  
 [responsive-chart-usability-d3](https://webkid.io/blog/responsive-chart-usability-d3/)  
+[brush+zoom](http://lai24862.blogspot.com/2016/08/focuscontext-via-brushing.html)  
+[D3-brush-and-tooltip](http://wrobstory.github.io/2013/11/D3-brush-and-tooltip.html)  
+[D3-Interactions](http://web.cse.ohio-state.edu/~shen.94/5544/Slides/D3-Interactions.pdf)  
