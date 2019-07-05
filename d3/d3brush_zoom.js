@@ -222,6 +222,7 @@ function drawChart2(data,width,height,id) {
 
 	d3.select(id).select('svg')
 	      .call(brush)
+	      //.call(brush.move,[100,200])
 
 	function selectbar(){
 		extent = d3.event.selection
