@@ -141,6 +141,11 @@ function drawChart2(data,width,height,id) {
 				.domain([d3.min(data,function(d){return d.low}),d3.max(data,function(d){return d.high})])
 				.range([0,svgHeight])
 
+	//need to be fixed(temperory)
+	var scaleY_ax = d3.scaleLinear()
+				.domain([d3.min(data,function(d){return d.low}),d3.max(data,function(d){return d.high})])
+				.range([svgHeight,0])
+
 	var chart1 = d3.select(id)
 			  	.append("svg")
 				.attr("width", svgWidth+margin)  
@@ -197,7 +202,7 @@ function drawChart2(data,width,height,id) {
     	.scale(scaleX)
 
 	var y_axis = d3.axisLeft()
-    	.scale(scaleY)
+    	.scale(scaleY_ax)
 
     if(id=="#select"){
 	    chart1.append("g")
