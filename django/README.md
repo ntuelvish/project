@@ -4,3 +4,6 @@
 * django  
 [time-zone setting](https://gist.github.com/OHua/fd35bec69a2a84c4fdfe4ec14644edfa)
 
+* vscode  
+tips - quickly create html file(!+tab)  
+
