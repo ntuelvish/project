@@ -7,3 +7,5 @@
 * vscode  
 tips - quickly create html file(!+tab)  
 
+### form  
+html+bs4/django/form/ModelForm(highest and completest level)  
