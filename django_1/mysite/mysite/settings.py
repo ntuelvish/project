@@ -120,3 +120,11 @@ USE_TZ = False #don't use defalt time-zone
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#send email
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com' #some email cooperate may not accecpt
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587 #gmail's default value, changable
+EMAIL_HOST_USER = 'akuelvish7@gmail.com'
+EMAIL_HOST_PASSWORD = 'hsivle0318'

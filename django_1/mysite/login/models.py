@@ -3,7 +3,6 @@ from django.db import models
 # Create your models here.
 
 class User(models.Model):
-
     gender = (
         ('male','男'),
         ('female','女'),

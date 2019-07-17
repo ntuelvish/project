@@ -9,3 +9,6 @@ tips - quickly create html file(!+tab)
 
 ### form  
 html+bs4/django/form/ModelForm(highest and completest level)  
+
+### send email  
+[gmail](https://medium.com/@_christopher/how-to-send-emails-with-python-django-through-google-smtp-server-for-free-22ea6ea0fb8e)
