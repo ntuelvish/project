@@ -128,3 +128,6 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587 #gmail's default value, changable
 EMAIL_HOST_USER = 'akuelvish7@gmail.com'
 EMAIL_HOST_PASSWORD = 'hsivle0318'
+
+#valid time for register
+CONFIRM_DAYS = 7

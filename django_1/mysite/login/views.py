@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.shortcuts import redirect
 from . import models
 from . import forms
+import datetime
+from django.conf import settings
 # Create your views here.
 
 #encode password
@@ -12,6 +14,27 @@ def hash_code(s, salt='mysite'):
     s += salt
     h.update(s.encode())
     return h.hexdigest()
+
+def make_confirm_string(user):
+    now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    code = hash_code(user.name, now)
+    models.ConfirmString.objects.create(code=code, user=user,)
+    return code
+
+def send_email(email, code):
+    from django.core.mail import EmailMultiAlternatives
+
+    subject = 'Confirm Email'
+    text_content = '''Thank you for register the website!'''
+    html_content = '''
+                    <p>Thank you for register<a href="http://{}/confirm/?code={}" target=blank>www.github.com</a>，\
+                    This is my site!</p>
+                    <p>Please click the link to confirm!</p>
+                    <p>The link is valid for {} days!</p>
+                    '''.format('127.0.0.1:7000', code, settings.CONFIRM_DAYS)
+    msg = EmailMultiAlternatives(subject, text_content, settings.EMAIL_HOST_USER, [email])
+    msg.attach_alternative(html_content, "text/html")
+    msg.send()
 
 def index(request):
     pass
@@ -38,6 +61,11 @@ def login(request):
             except:
                 message = "User doesn't exist!"
                 return render(request, 'login/login.html', locals())
+
+            if not user.has_confirmed:
+                message = 'User need to confirm！'
+                return render(request, 'login/login.html', locals())
+
             #check if the password is right
             if user.password == hash_code(password):
                 #set dictionary
@@ -89,7 +117,13 @@ def register(request):
             new_user.email = email
             new_user.sex = sex
             new_user.save()
-            return redirect('/login/')
+
+            code = make_confirm_string(new_user)
+            send_email(email, code)
+
+            message = 'Please get the confirm email!'
+            return render(request, 'login/confirm.html', locals())#redirect('/login/')
+
     register_form = forms.RegisterForm()
     return render(request, 'login/register.html', locals())
 
@@ -98,3 +132,25 @@ def logout(request):
         return redirect('/index/')
     request.session.flush() #clear/delete current session
     return redirect('/index/')
+
+def user_confirm(request):
+    code = request.GET.get('code', None)
+    message = ''
+    try:
+        confirm = models.ConfirmString.objects.get(code=code)
+    except:
+        message = 'Invalid request!!'
+        return render(request, 'login/confirm.html', locals())
+
+    c_time = confirm.c_time
+    now = datetime.datetime.now()
+    if now > c_time + datetime.timedelta(settings.CONFIRM_DAYS):
+        confirm.user.delete()
+        message = 'Your mail is out of date!Confirm it again!'
+        return render(request, 'login/confirm.html', locals())
+    else:
+        confirm.user.has_confirmed = True
+        confirm.user.save()
+        confirm.delete()
+        message = 'Thank you for the confirm!Please login!'
+        return render(request, 'login/confirm.html', locals())
