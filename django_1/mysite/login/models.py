@@ -21,3 +21,16 @@ class User(models.Model):
         ordering = ['-c_time'] #'-':inverse order
         verbose_name = '用戶'
         verbose_name_plural = '用戶'
+
+class ConfirmString(models.Model):
+    code = models.CharField(max_length=256, verbose_name='註冊碼')
+    user = models.OneToOneField('User', verbose_name='關聯的用戶')
+    c_time = models.DateTimeField(auto_now_add=True, verbose_name='創建時間')
+
+    def __str__(self):
+        return self.user.name + ": " + self.code
+    
+    class Meta:
+        ordering = ['-c_time'] #'-':inverse order
+        verbose_name = '確認碼'
+        verbose_name_plural = '確認碼'
