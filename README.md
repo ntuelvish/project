@@ -8,23 +8,35 @@
 * HTML structure  
 * CSS(style)  
 [guide](https://www.youtube.com/watch?v=YnSmOQF5Lwk)  
-* Bootstrap  
+
+### Bootstrap  
 [bootstrap](https://bootstrap.hexschool.com/)  
 [grid](https://learnku.com/articles/21215)  
+[container](https://pjchender.blogspot.com/2017/10/bs-bootstrap-4-custom-container-and.html)  
+
+### Sublimetext  
+[sublimeText3编辑器使用大全](http://caibaojian.com/fe-weekly-20171113.html)  
+[常用外掛](https://codertw.com/%E8%BB%9F%E9%AB%94%E9%96%8B%E7%99%BC%E5%B7%A5%E5%85%B7/24530/)
+
+### Tools  
 * Font style creater  
 [ZHENBI](http://jiqie.zhenbi.com/a/34.htm)  
+
+### Effect    
 * Hover effect  
 [Hover effect example](https://miketricking.github.io/bootstrap-image-hover/)  
 * cut picture  
 [IMGonline](https://www.imgonline.com.ua/eng/cut-photo-into-pieces-result.php) 
-* sublimetext  
-[sublimeText3编辑器使用大全](http://caibaojian.com/fe-weekly-20171113.html)  
-[常用外掛](https://codertw.com/%E8%BB%9F%E9%AB%94%E9%96%8B%E7%99%BC%E5%B7%A5%E5%85%B7/24530/)   
 * Parallax Scrolling Effect  
 [Parallax Scrolling](https://www.justinmind.com/blog/20-must-see-examples-parallax-effect-websites/)  
 [parallax](https://mdbootstrap.com/docs/jquery/css/parallax/)  
 [parallax plugin](https://www.itread01.com/content/1538487496.html)  
-## D3  
+
+### D3  
+* Tutorial  
+[github/wiki](https://github.com/d3/d3/wiki/Tutorials)  
+[oxxostudio](https://www.oxxostudio.tw/list.html)  
+
 [Create a JavaScript bar chart with D3](https://www.creativebloq.com/javascript/create-javascript-bar-chart-d3-9134563)  
 [svg-basic-shapes-and-d3js](https://www.dashingd3js.com/svg-basic-shapes-and-d3js)  
 [d3js](https://www.tutorialsteacher.com/d3js)  
