@@ -13,7 +13,7 @@
 [bootstrap](https://bootstrap.hexschool.com/)  
 [grid](https://learnku.com/articles/21215)  
 [container](https://pjchender.blogspot.com/2017/10/bs-bootstrap-4-custom-container-and.html)  
-
+[align](https://medium.com/wdstack/bootstrap-4-vertical-center-1211448a2eff)  
 ### Sublimetext  
 [sublimeText3编辑器使用大全](http://caibaojian.com/fe-weekly-20171113.html)  
 [常用外掛](https://codertw.com/%E8%BB%9F%E9%AB%94%E9%96%8B%E7%99%BC%E5%B7%A5%E5%85%B7/24530/)
