@@ -53,3 +53,5 @@
 [simple tooltip](http://bl.ocks.org/d3noob/a22c42db65eb00d4e369)  
 [d3 candlesticks](https://medium.com/@peterchen302/%E7%94%A8d3-js%E7%95%AB%E5%87%BAk%E7%B7%9A%E5%9C%96-part-1-269abea7be77)  
 [zoomable candlesticks](https://bl.ocks.org/tompiler/6045b80d2164077faaf96e0304531bba)  
+[div-tooltips-versus-using-g-tooltips-in-d3](https://stackoverflow.com/questions/43613196/using-div-tooltips-versus-using-g-tooltips-in-d3/43619702)  
+[d3 tooltip append g](https://stackoverflow.com/questions/43970986/why-is-my-d3-js-tooltip-not-working)  
