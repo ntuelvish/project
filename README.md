@@ -55,3 +55,6 @@
 [zoomable candlesticks](https://bl.ocks.org/tompiler/6045b80d2164077faaf96e0304531bba)  
 [div-tooltips-versus-using-g-tooltips-in-d3](https://stackoverflow.com/questions/43613196/using-div-tooltips-versus-using-g-tooltips-in-d3/43619702)  
 [d3 tooltip append g](https://stackoverflow.com/questions/43970986/why-is-my-d3-js-tooltip-not-working)  
+[Simple Independent Axis Zooming and Panning](http://bl.ocks.org/jazeee/5414435213db1bee9e912a9dca83a41f)  
+[create-stacked-line-chart-d3-multiple-y-axis-and-common-x-axis](https://stackoverflow.com/questions/29402112/how-to-create-stacked-line-chart-d3-multiple-y-axis-and-common-x-axis)  
+[zooming](https://www.d3-graph-gallery.com/graph/interactivity_zoom.html)  
