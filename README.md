@@ -58,3 +58,5 @@
 [Simple Independent Axis Zooming and Panning](http://bl.ocks.org/jazeee/5414435213db1bee9e912a9dca83a41f)  
 [create-stacked-line-chart-d3-multiple-y-axis-and-common-x-axis](https://stackoverflow.com/questions/29402112/how-to-create-stacked-line-chart-d3-multiple-y-axis-and-common-x-axis)  
 [zooming](https://www.d3-graph-gallery.com/graph/interactivity_zoom.html)  
+[d3-brush-with-multiple-y-axes](https://stackoverflow.com/questions/35587712/using-d3-brush-with-multiple-y-axes)  
+[brush](http://bl.ocks.org/kendopunk/c4b189475344a660e36b)  
