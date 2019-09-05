@@ -60,3 +60,7 @@
 [zooming](https://www.d3-graph-gallery.com/graph/interactivity_zoom.html)  
 [d3-brush-with-multiple-y-axes](https://stackoverflow.com/questions/35587712/using-d3-brush-with-multiple-y-axes)  
 [brush](http://bl.ocks.org/kendopunk/c4b189475344a660e36b)  
+[brush&zoom](https://books.google.com.tw/books?id=a1qWDwAAQBAJ&pg=PA371&lpg=PA371&dq=d3+brush.move&source=bl&ots=KjaE04gwLm&sig=ACfU3U1hmlekOlpIBUG23CYH9ul1OpLMWg&hl=zh-TW&sa=X&ved=2ahUKEwiNsKeo1JHkAhVaL6YKHXQZBokQ6AEwCXoECAkQAQ#v=onepage&q=d3%20brush.move&f=false)  
+[brush handle](https://apprize.info/javascript/d3_1/10.html)  
+[brush handles](https://bl.ocks.org/Fil/2d43867ba1f36a05459c7113c7f6f98a)  
+[brush handle-1](https://observablehq.com/@d3/brush-handles)  
